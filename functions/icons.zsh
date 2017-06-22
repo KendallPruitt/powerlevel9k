@@ -142,7 +142,7 @@ case $POWERLEVEL9K_MODE in
       VCS_GIT_GITLAB_ICON            $'\uF296 '             # 
       VCS_HG_ICON                    $'\uF0C3 '             # 
       VCS_SVN_ICON                   '(svn) '
-      RUST_ICON                      $'\uE6A8'              #  
+      RUST_ICON                      $'\uE6A8'              # 
       PYTHON_ICON                    $'\U1F40D'             # 🐍
       SWIFT_ICON                     ''
       GO_ICON                        ''
@@ -172,7 +172,7 @@ case $POWERLEVEL9K_MODE in
       TEST_ICON                      $'\uF188'              # 
       TODO_ICON                      $'\uF133'              # 
       BATTERY_ICON                   $'\UF240 '             # 
-      DISK_ICON                      $'\uF0A0'              #  
+      DISK_ICON                      $'\uF0A0'              # 
       OK_ICON                        $'\uF00C'              # 
       FAIL_ICON                      $'\uF00D'              # 
       SYMFONY_ICON                   $'\uE757'              # 
@@ -206,7 +206,7 @@ case $POWERLEVEL9K_MODE in
       VCS_GIT_ICON                   $'\uF113 '             # 
       VCS_GIT_GITHUB_ICON            $'\uE709 '             # 
       VCS_GIT_BITBUCKET_ICON         $'\uE703 '             # 
-      VCS_GIT_GITLAB_ICON            $'\uF296 '             #  
+      VCS_GIT_GITLAB_ICON            $'\uF296 '             # 
       VCS_HG_ICON                    $'\uF0C3 '             # 
       VCS_SVN_ICON                   $'\uE72D '             # 
       RUST_ICON                      $'\uE7A8 '             # 
@@ -214,9 +214,9 @@ case $POWERLEVEL9K_MODE in
       SWIFT_ICON                     $'\uE755'              # 
       GO_ICON                        $'\uE626'              # 
       PUBLIC_IP_ICON                 $'\UF0AC'              # 
-      LOCK_ICON                      $'\UF023'              #  
-      EXECUTION_TIME_ICON            $'\uF252'              #  
-      SSH_ICON                       $'\uF489'              #  
+      LOCK_ICON                      $'\UF023'              # 
+      EXECUTION_TIME_ICON            $'\uF252'              # 
+      SSH_ICON                       $'\uF489'              # 
     )
   ;;
   *)
@@ -241,7 +241,7 @@ case $POWERLEVEL9K_MODE in
       BATTERY_ICON                   $'\U1F50B'             # 🔋
       DISK_ICON                      $'hdd '
       OK_ICON                        $'\u2713'              # ✓
-      FAIL_ICON                      $'\u2718'              # ✘
+      FAIL_ICON                      $'\uF468'              # ✘
       SYMFONY_ICON                   'SF'
       NODE_ICON                      $'\u2B22'              # ⬢
       MULTILINE_FIRST_PROMPT_PREFIX  $'\u256D'$'\u2500'
@@ -249,7 +249,7 @@ case $POWERLEVEL9K_MODE in
       APPLE_ICON                     'OSX'
       FREEBSD_ICON                   'BSD'
       ANDROID_ICON                   'And'
-      LINUX_ICON                     'Lx'
+      LINUX_ICON                     $'\uF300'
       SUNOS_ICON                     'Sun'
       HOME_ICON                      ''
       HOME_SUB_ICON                  ''
@@ -262,13 +262,13 @@ case $POWERLEVEL9K_MODE in
       VCS_UNTRACKED_ICON             '?'
       VCS_UNSTAGED_ICON              $'\u25CF'              # ●
       VCS_STAGED_ICON                $'\u271A'              # ✚
-      VCS_STASH_ICON                 $'\u235F'              # ⍟
+      VCS_STASH_ICON                 $'\uF192 '             # ⍟
       VCS_INCOMING_CHANGES_ICON      $'\u2193'              # ↓
       VCS_OUTGOING_CHANGES_ICON      $'\u2191'              # ↑
       VCS_TAG_ICON                   ''
       VCS_BOOKMARK_ICON              $'\u263F'              # ☿
       VCS_COMMIT_ICON                ''
-      VCS_BRANCH_ICON                $'\uE0A0'              # 
+      VCS_BRANCH_ICON                $'\uF418 '             # 
       VCS_REMOTE_BRANCH_ICON         $'\u2192'              # →
       VCS_GIT_ICON                   ''
       VCS_GIT_GITHUB_ICON            ''

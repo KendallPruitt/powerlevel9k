@@ -899,6 +899,45 @@ prompt_os_icon() {
   "$1_prompt_segment" "$0" "$2" "black" "255" "$OS_ICON"
 }
 
+# if user is admin, print admin icon. Otherwise print a little OS icon
+prompt_my_root_icon() {
+  if [[ "$UID" -eq 0 ]]; then
+    "$1_prompt_segment" "$0_ROOT" "$2" "$DEFAULT_COLOR" "yellow" "" 'ROOT_ICON'
+  else
+    if [[ ! -w "$PWD" ]]; then
+      "$1_prompt_segment" "$0_FORBIDDEN" "$2" "red" "226" "" 'LOCK_ICON'
+    else
+      "$1_prompt_segment" "$0_DEFAULT" "$2" "black" "255" "$OS_ICON"
+    fi
+  fi
+}
+
+# Status: return code if an error occurs, otherwise just the command number (in local history)
+prompt_my_status() {
+  if [[ "$RETVAL" -ne 0 ]]; then
+    "$1_prompt_segment" "$0_ERROR" "$2" "red" "226" "$RETVAL" 'FAIL_ICON'
+  else
+    "$1_prompt_segment" "$0_OK" "$2" "244" "$DEFAULT_COLOR" '%h'
+  fi
+}
+
+#My Time: If the previous command takes longer than a second, print the amount of time it took. Otherwise print nothing
+prompt_my_time() {
+  if [[ "$timer_show" -gt 1 ]]; then
+    local T=$timer_show
+    local D=$((T/60/60/24))
+    local H=$((T/60/60%24))
+    local M=$((T/60%60))
+    local S=$((T%60))
+    local output=''
+    (( $D > 0 )) && output="${D}d"
+    (( $H > 0 )) && output="${output}${H}h"
+    (( $M > 0 )) && output="${output}${M}m"
+    output="${output}${S}s"
+    "$1_prompt_segment" "$0" "$2" "000" "010" "$output"
+  fi
+}
+
 # print PHP version number
 prompt_php_version() {
   local php_version
