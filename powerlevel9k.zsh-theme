@@ -901,8 +901,12 @@ prompt_os_icon() {
 
 # if user is admin, print admin icon. Otherwise print a little OS icon
 prompt_my_root_icon() {
+  # if [[ "$HOSTNAME" -eq "" ]]; then
+  #   "$1_prompt_segment" "$0_SSH" "$2" "$DEFAULT_COLOR" "yellow" "" 'ROOT_ICON'
   if [[ "$UID" -eq 0 ]]; then
     "$1_prompt_segment" "$0_ROOT" "$2" "$DEFAULT_COLOR" "yellow" "" 'ROOT_ICON'
+  # elif [[ -n "$SSH_CLIENT" ]] || [[ -n "$SSH_TTY" ]]; then
+  #   "$1_prompt_segment" "$0_SSH" "$2" "$DEFAULT_COLOR" "yellow" "" 'SSH_ICON'
   else
     if [[ ! -w "$PWD" ]]; then
       "$1_prompt_segment" "$0_FORBIDDEN" "$2" "red" "226" "" 'LOCK_ICON'

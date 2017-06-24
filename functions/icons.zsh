@@ -224,6 +224,10 @@ case $POWERLEVEL9K_MODE in
     # See https://github.com/Lokaltog/powerline-fonts
     # Set the right locale to protect special characters
     local LC_ALL="" LC_CTYPE="en_US.UTF-8"
+    osicon=$'\uF300'
+    if [[ "$HOSTNAME" == "laptopArch" ]]; then
+      osicon=$'\uF179'
+    fi
     icons=(
       LEFT_SEGMENT_SEPARATOR         $'\uE0B0'              # 
       RIGHT_SEGMENT_SEPARATOR        $'\uE0B2'              # 
@@ -231,7 +235,7 @@ case $POWERLEVEL9K_MODE in
       LEFT_SUBSEGMENT_SEPARATOR      $'\uE0B1'              # 
       RIGHT_SUBSEGMENT_SEPARATOR     $'\uE0B3'              # 
       CARRIAGE_RETURN_ICON           $'\u21B5'              # ↵
-      ROOT_ICON                      $'\u26A1'              # ⚡
+      ROOT_ICON                      $'\uF0E7'              # ⚡
       RUBY_ICON                      ''
       AWS_ICON                       'AWS:'
       AWS_EB_ICON                    $'\U1F331 '            # 🌱
@@ -249,7 +253,7 @@ case $POWERLEVEL9K_MODE in
       APPLE_ICON                     'OSX'
       FREEBSD_ICON                   'BSD'
       ANDROID_ICON                   'And'
-      LINUX_ICON                     $'\uF300'
+      LINUX_ICON                     $osicon
       SUNOS_ICON                     'Sun'
       HOME_ICON                      ''
       HOME_SUB_ICON                  ''
@@ -262,7 +266,7 @@ case $POWERLEVEL9K_MODE in
       VCS_UNTRACKED_ICON             '?'
       VCS_UNSTAGED_ICON              $'\u25CF'              # ●
       VCS_STAGED_ICON                $'\u271A'              # ✚
-      VCS_STASH_ICON                 $'\uF192 '             # ⍟
+      VCS_STASH_ICON                 $'\uF487 '             # ⍟
       VCS_INCOMING_CHANGES_ICON      $'\u2193'              # ↓
       VCS_OUTGOING_CHANGES_ICON      $'\u2191'              # ↑
       VCS_TAG_ICON                   ''
